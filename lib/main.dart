@@ -14,6 +14,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        debugShowCheckedModeBanner: false,
+
         title: 'Flutter Demo',
         theme: ThemeData(
           primarySwatch: Colors.blue,
@@ -31,39 +33,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-class Empresa extends StatelessWidget{
-  @override
-  Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: AppBar(title: new Text("EMPRESA"),),
-      body: Center(
-        child: Text("SECCIÓN EMPRESA"),
-      ),
-    );
-  }
-}
-class Productos extends StatelessWidget{
-  @override
-  Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: AppBar(title: new Text("PRODUCTOS"),),
-      body: Center(
-        child: Text("SECCIÓN PRODUCTOS"),
-      ),
-    );
-  }
-}
-class Contacto extends StatelessWidget{
-  @override
-  Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: AppBar(title: new Text("CONTACTO"),),
-      body: Center(
-        child: Text("SECCIÓN CONTACTO"),
-      ),
-    );
-  }
-}
-
-

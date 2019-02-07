@@ -4,7 +4,7 @@ import 'dart:async';
 import 'package:flutter_widgetexamples/Expanded.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-final _borderRadius = BorderRadius.circular(24.0);//para la curva de InkWell
+final _borderRadius = BorderRadius.circular(24.0);
 final _backgroundColorTitleAppBar = Color.fromARGB(255, 1, 117, 194);
 final _backgroundColorTitle = Color.fromARGB(255, 2, 86, 155);
 
@@ -24,17 +24,17 @@ class _DialogDashboardState extends State<DialogDashboard>{
 
   Future _askUser() async {
     switch(
-    await showDialog(
-        context: context,
-        child: new SimpleDialog(
-          title: new Text('Te gusta Flutter'),
-          children: <Widget>[
-            new SimpleDialogOption(child: new Text('Si!!!'),onPressed: (){_setValue('Si');},),
-            new SimpleDialogOption(child: new Text('No :('),onPressed: (){_setValue('No');},),
-            new SimpleDialogOption(child: new Text('Masomenos :('),onPressed: (){_setValue('Masomenos');},),
-          ],
-        )
-    )
+      await showDialog(
+          context: context,
+          child: new SimpleDialog(
+            title: new Text('Te gusta Flutter'),
+            children: <Widget>[
+              new SimpleDialogOption(child: new Text('Si!!!'),onPressed: (){_setValue('Si');},),
+              new SimpleDialogOption(child: new Text('No :('),onPressed: (){_setValue('No');},),
+              new SimpleDialogOption(child: new Text('Masomenos :('),onPressed: (){_setValue('Masomenos');},),
+            ],
+          )
+      )
     )
 
     {
@@ -66,13 +66,13 @@ class _DialogDashboardState extends State<DialogDashboard>{
     showModalBottomSheet<void>(
         context: context,
         builder: (BuildContext context) {
-          return new Container(
-            padding: new EdgeInsets.all(15.0),
-            child: new Row(
+          return Container(
+            padding: EdgeInsets.all(15.0),
+            child: Row(
               mainAxisAlignment:  MainAxisAlignment.center,
               children: <Widget>[
-                new Text('Some info here', style: new TextStyle(color: Colors.red, fontWeight: FontWeight.bold),),
-                new RaisedButton(onPressed: () => Navigator.pop(context), child: new Text('Close'),)
+                Text('Tu mensaje', style: new TextStyle(color: Colors.black, fontWeight: FontWeight.bold),),
+                RaisedButton(onPressed: () => Navigator.pop(context), child: new Text('Cerrar'),)
               ],
             ),
           );
@@ -190,18 +190,16 @@ class _DialogDashboardState extends State<DialogDashboard>{
 
                   Container(
                     margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
-
-                    //color: Color.fromARGB(255, 19, 185, 253),
-                    height: 45.0,//alto del Widget
+                    height: 45.0,
                     child: Row(
 
                       children: <Widget>[
 
 
                         InkWell(
-                          borderRadius: _borderRadius,//curva
-                          splashColor:Colors.amberAccent,//color al presionar tiempo corto
-                          highlightColor: Colors.amber,//color al presionar tiempo largo, puede cabiar por Colors.blue para notar la diferencia
+                          borderRadius: _borderRadius,
+                          splashColor:Colors.amberAccent,
+                          highlightColor: Colors.amber,
 
                           onTap: (){
                             _launchURL(url2);
@@ -236,9 +234,9 @@ class _DialogDashboardState extends State<DialogDashboard>{
                         ),
 
                         InkWell(
-                          borderRadius: _borderRadius,//curva
-                          splashColor:Colors.amberAccent,//color al presionar tiempo corto
-                          highlightColor: Colors.amber,//color al presionar tiempo largo, puede cabiar por Colors.blue para notar la diferencia
+                          borderRadius: _borderRadius,
+                          splashColor:Colors.amberAccent,
+                          highlightColor: Colors.amber,
 
                           onTap: (){
                             _launchURL(url2);
@@ -292,8 +290,9 @@ class _DialogDashboardState extends State<DialogDashboard>{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       appBar: AppBar(
-        title: Text('Buttons Dashborad Flutter'),
+        title: Text('Dialogs Dashboard Flutter'),
         backgroundColor: _backgroundColorTitleAppBar,
       ),
 
@@ -316,8 +315,8 @@ class _DialogDashboardState extends State<DialogDashboard>{
               )
           )
               ,'SimpleDialog',
-              'https://docs.flutter.io/flutter/material/IconButton-class.html',
-              'https://github.com/JohnnHidalgo/udacity_navigation_state/blob/master/lib/ButtonsDashboard.dart'
+              'https://docs.flutter.io/flutter/material/SimpleDialog-class.html',
+              'https://github.com/JohnnHidalgo/flutter_widgetexamples/blob/master/lib/DialogDashboard.dart'
           ),
 
 
@@ -326,13 +325,13 @@ class _DialogDashboardState extends State<DialogDashboard>{
               child: new Column(
                 children: <Widget>[
                   Text(_value1),
-                  RaisedButton(onPressed: () => _showAlert(context, 'Do you like flutter, I do!'), child: new Text('Click me'),)
+                  RaisedButton(onPressed: () => _showAlert(context, 'Me ancanta Flutter!'), child: new Text('Click me'),)
                 ],
               ),
             ),
           ),'AlertDialog',
-              'https://docs.flutter.io/flutter/material/IconButton-class.html',
-              'https://github.com/JohnnHidalgo/udacity_navigation_state/blob/master/lib/ButtonsDashboard.dart'
+              'https://docs.flutter.io/flutter/material/AlertDialog-class.html',
+              'https://github.com/JohnnHidalgo/flutter_widgetexamples/blob/master/lib/DialogDashboard.dart'
           ),
 
 
@@ -347,8 +346,8 @@ class _DialogDashboardState extends State<DialogDashboard>{
               ),
             ),
           ),'BottonSheet',
-              'https://docs.flutter.io/flutter/material/IconButton-class.html',
-              'https://github.com/JohnnHidalgo/udacity_navigation_state/blob/master/lib/ButtonsDashboard.dart'
+              'https://docs.flutter.io/flutter/material/BottomSheet-class.html',
+              'https://github.com/JohnnHidalgo/flutter_widgetexamples/blob/master/lib/DialogDashboard.dart'
           ),
 
 
@@ -368,8 +367,8 @@ class _DialogDashboardState extends State<DialogDashboard>{
               ],
             ),
           ),'Expancion Panel',
-              'https://docs.flutter.io/flutter/material/IconButton-class.html',
-              'https://github.com/JohnnHidalgo/udacity_navigation_state/blob/master/lib/ButtonsDashboard.dart'
+              'https://docs.flutter.io/flutter/material/ExpansionPanel-class.html',
+              'https://github.com/JohnnHidalgo/flutter_widgetexamples/blob/master/lib/DialogDashboard.dart'
           ),
 
         ],

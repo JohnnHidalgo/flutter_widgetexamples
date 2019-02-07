@@ -257,7 +257,7 @@ class _InputDashboardState extends State<InputDashboard>{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Input & Selection Dashborad Flutter'),
+        title: Text('Input & Selection Dashboard Flutter'),
         backgroundColor: _backgroundColorTitleAppBar,
       ),
 
@@ -319,31 +319,31 @@ class _InputDashboardState extends State<InputDashboard>{
                 ),
               )
           ),'TextField',
-              'https://docs.flutter.io/flutter/material/IconButton-class.html',
-              'https://github.com/JohnnHidalgo/udacity_navigation_state/blob/master/lib/ButtonsDashboard.dart'
+              'https://docs.flutter.io/flutter/material/TextField-class.html',
+              'https://github.com/JohnnHidalgo/flutter_widgetexamples/blob/master/lib/InputDashboard.dart'
           ),
 
 
           MyItems(Container(
             child: makeCheck(),
           ),'Checkbox',
-              'https://docs.flutter.io/flutter/material/IconButton-class.html',
-              'https://github.com/JohnnHidalgo/udacity_navigation_state/blob/master/lib/ButtonsDashboard.dart'
+              'https://docs.flutter.io/flutter/material/Checkbox-class.html',
+              'https://github.com/JohnnHidalgo/flutter_widgetexamples/blob/master/lib/InputDashboard.dart'
           ),
 
           MyItems(Container(
             child:  makeRadios(),
           ),'RadioButton',
-              'https://docs.flutter.io/flutter/material/IconButton-class.html',
-              'https://github.com/JohnnHidalgo/udacity_navigation_state/blob/master/lib/ButtonsDashboard.dart'
+              'https://docs.flutter.io/flutter/material/Radio/onChanged.html',
+              'https://github.com/JohnnHidalgo/flutter_widgetexamples/blob/master/lib/InputDashboard.dart'
           ),
 
 
           MyItems(Container(
             child: Switch(value: _value1S, onChanged: _onChanged1),
           ),'Switch',
-              'https://docs.flutter.io/flutter/material/IconButton-class.html',
-              'https://github.com/JohnnHidalgo/udacity_navigation_state/blob/master/lib/ButtonsDashboard.dart'
+              'https://docs.flutter.io/flutter/material/Switch-class.html',
+              'https://github.com/JohnnHidalgo/flutter_widgetexamples/blob/master/lib/InputDashboard.dart'
           ),
 
 
@@ -357,8 +357,8 @@ class _InputDashboardState extends State<InputDashboard>{
                 ),
               )
           ),'Slider',
-              'https://docs.flutter.io/flutter/material/IconButton-class.html',
-              'https://github.com/JohnnHidalgo/udacity_navigation_state/blob/master/lib/ButtonsDashboard.dart'
+              'https://docs.flutter.io/flutter/material/Slider-class.html',
+              'https://github.com/JohnnHidalgo/flutter_widgetexamples/blob/master/lib/InputDashboard.dart'
           ),
 
           MyItems(Container(
@@ -375,8 +375,8 @@ class _InputDashboardState extends State<InputDashboard>{
               ],
             ),
           ),'Date',
-              'https://docs.flutter.io/flutter/material/IconButton-class.html',
-              'https://github.com/JohnnHidalgo/udacity_navigation_state/blob/master/lib/ButtonsDashboard.dart'
+              'https://docs.flutter.io/flutter/material/showDatePicker.html',
+              'https://github.com/JohnnHidalgo/flutter_widgetexamples/blob/master/lib/InputDashboard.dart'
           ),
 
         ],

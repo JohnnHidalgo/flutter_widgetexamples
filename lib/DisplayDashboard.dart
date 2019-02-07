@@ -1,9 +1,8 @@
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_widgetexamples/ItemInfo.dart';
-import 'dart:math';
 
-final _borderRadius = BorderRadius.circular(24.0);//para la curva de InkWell
+final _borderRadius = BorderRadius.circular(24.0);
 final _backgroundColorTitleAppBar = Color.fromARGB(255, 1, 117, 194);
 final _backgroundColorTitle = Color.fromARGB(255, 2, 86, 155);
 
@@ -15,7 +14,6 @@ class  DisplayDashboard extends StatefulWidget{
 
 class _DiplayDashboardState extends State<DisplayDashboard>{
   ///Chip
-
   int counter = 0;
   List<Widget> _list = new List<Widget>();
 
@@ -60,9 +58,9 @@ class _DiplayDashboardState extends State<DisplayDashboard>{
       key: key,
       padding: new EdgeInsets.all(10.0),
       child: new Chip(
-        label: new Text('${i} Name here'),
+        label: new Text('${i} Tu Item aqui'),
         deleteIconColor: Colors.red,
-        deleteButtonTooltipMessage: 'Delete',
+        deleteButtonTooltipMessage: 'Eliminar',
         onDeleted: () => _removeItem(key),
         avatar: new CircleAvatar(
           backgroundColor: Colors.grey.shade800,
@@ -80,7 +78,7 @@ class _DiplayDashboardState extends State<DisplayDashboard>{
       Widget child = _list.elementAt(i);
       if(child.key == key) {
         setState(() => _list.removeAt(i));
-        print('Removing ${key.toString()}');
+        print('Quitar${key.toString()}');
       }
     }
   }
@@ -101,16 +99,10 @@ class _DiplayDashboardState extends State<DisplayDashboard>{
           padding: const EdgeInsets.all(8.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
-
-
             children: <Widget>[
-
               Column(
-
                 children: <Widget>[
-
                   Column(
-
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       ///Text
@@ -147,11 +139,10 @@ class _DiplayDashboardState extends State<DisplayDashboard>{
 
                       children: <Widget>[
 
-
                         InkWell(
-                          borderRadius: _borderRadius,//curva
-                          splashColor:Colors.amberAccent,//color al presionar tiempo corto
-                          highlightColor: Colors.amber,//color al presionar tiempo largo, puede cabiar por Colors.blue para notar la diferencia
+                          borderRadius: _borderRadius,
+                          splashColor:Colors.amberAccent,
+                          highlightColor: Colors.amber,
 
                           onTap: (){
                             print('Hello InkWell');
@@ -186,9 +177,9 @@ class _DiplayDashboardState extends State<DisplayDashboard>{
                         ),
 
                         InkWell(
-                          borderRadius: _borderRadius,//curva
-                          splashColor:Colors.amberAccent,//color al presionar tiempo corto
-                          highlightColor: Colors.amber,//color al presionar tiempo largo, puede cabiar por Colors.blue para notar la diferencia
+                          borderRadius: _borderRadius,
+                          splashColor:Colors.amberAccent,
+                          highlightColor: Colors.amber,
 
                           onTap: (){
                             print('Hello InkWell');
@@ -243,7 +234,7 @@ class _DiplayDashboardState extends State<DisplayDashboard>{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Buttons Dashborad Flutter'),
+        title: Text('Display Dashboard Flutter'),
         backgroundColor: _backgroundColorTitleAppBar,
       ),
 
@@ -264,8 +255,8 @@ class _DiplayDashboardState extends State<DisplayDashboard>{
 
             ),
           ),'Image',
-              'https://docs.flutter.io/flutter/material/IconButton-class.html',
-              'https://github.com/JohnnHidalgo/udacity_navigation_state/blob/master/lib/ButtonsDashboard.dart'
+              'https://docs.flutter.io/flutter/widgets/Image-class.html',
+              'https://github.com/JohnnHidalgo/flutter_widgetexamples/blob/master/lib/DisplayDashboard.dart'
           ),
 
 
@@ -372,8 +363,8 @@ class _DiplayDashboardState extends State<DisplayDashboard>{
             ),
 
           ),'Icon',
-              'https://docs.flutter.io/flutter/material/IconButton-class.html',
-              'https://github.com/JohnnHidalgo/udacity_navigation_state/blob/master/lib/ButtonsDashboard.dart'
+              'https://docs.flutter.io/flutter/widgets/Icon-class.html',
+              'https://github.com/JohnnHidalgo/flutter_widgetexamples/blob/master/lib/DisplayDashboard.dart'
           ),
 
 
@@ -384,8 +375,8 @@ class _DiplayDashboardState extends State<DisplayDashboard>{
               ),
             ),
           ),'Chip',
-              'https://docs.flutter.io/flutter/material/IconButton-class.html',
-              'https://github.com/JohnnHidalgo/udacity_navigation_state/blob/master/lib/ButtonsDashboard.dart'
+              'https://docs.flutter.io/flutter/material/Chip-class.html',
+              'https://github.com/JohnnHidalgo/flutter_widgetexamples/blob/master/lib/DisplayDashboard.dart'
           ),
 
 
@@ -399,7 +390,7 @@ class _DiplayDashboardState extends State<DisplayDashboard>{
                   label: Text('Item'),
                 ),
                 DataColumn(
-                  label: Text('Price'),
+                  label: Text('Precio'),
                 ),
               ],
               rows: items
@@ -423,8 +414,8 @@ class _DiplayDashboardState extends State<DisplayDashboard>{
                   .toList(),
             ),
           ),'Datatable',
-              'https://docs.flutter.io/flutter/material/IconButton-class.html',
-              'https://github.com/JohnnHidalgo/udacity_navigation_state/blob/master/lib/ButtonsDashboard.dart'
+              'https://docs.flutter.io/flutter/material/DataTable-class.html',
+              'https://github.com/JohnnHidalgo/flutter_widgetexamples/blob/master/lib/DisplayDashboard.dart'
           ),
 
 
@@ -437,8 +428,8 @@ class _DiplayDashboardState extends State<DisplayDashboard>{
                         padding: new EdgeInsets.all(32.0),
                         child: new Column(
                           children: <Widget>[
-                            new Text('Hello World!'),
-                            new Text('How are you?')
+                            new Text('Hola mundo !'),
+                            new Text('Como estas?')
                           ],
                         ),
                       ),
@@ -467,8 +458,8 @@ class _DiplayDashboardState extends State<DisplayDashboard>{
                 )
             ),
           ), 'Card',
-              'https://docs.flutter.io/flutter/material/IconButton-class.html',
-              'https://github.com/JohnnHidalgo/udacity_navigation_state/blob/master/lib/ButtonsDashboard.dart'
+              'https://docs.flutter.io/flutter/material/Card-class.html',
+              'https://github.com/JohnnHidalgo/flutter_widgetexamples/blob/master/lib/DisplayDashboard.dart'
           ),
 
 
@@ -483,27 +474,18 @@ class _DiplayDashboardState extends State<DisplayDashboard>{
                 children: List.generate(10, (index) {
                   return Center(
                     child: Image.asset('assets/Logo.png'),
-
                   );
                 }),
               )
 
           ),
 
-
               'GridView',
-              'https://docs.flutter.io/flutter/material/IconButton-class.html',
-              'https://github.com/JohnnHidalgo/udacity_navigation_state/blob/master/lib/ButtonsDashboard.dart'
+              'https://docs.flutter.io/flutter/widgets/GridView-class.html',
+              'https://github.com/JohnnHidalgo/flutter_widgetexamples/blob/master/lib/DisplayDashboard.dart'
           ),
 
-
-
-
-          /*
-        */
-
         ],
-
 
         staggeredTiles: [
           StaggeredTile.extent(2,480.0),
@@ -517,6 +499,5 @@ class _DiplayDashboardState extends State<DisplayDashboard>{
       ),
     );
   }
-
 
 }

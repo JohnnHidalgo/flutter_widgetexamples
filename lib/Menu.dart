@@ -22,8 +22,8 @@ class Inicio extends StatelessWidget {
             height: _rowHeight,
             child: InkWell(
               borderRadius: _borderRadius,
-              splashColor: Colors.redAccent,
-              highlightColor: Colors.red,
+              splashColor:Colors.amberAccent,
+              highlightColor: Colors.amber,
 
               onTap:() {
                 Navigator.pushNamed(context, "/buttons");
@@ -59,8 +59,8 @@ class Inicio extends StatelessWidget {
             height: _rowHeight,
             child: InkWell(
               borderRadius: _borderRadius,
-              splashColor: Colors.redAccent,
-              highlightColor: Colors.red,
+              splashColor:Colors.amberAccent,
+              highlightColor: Colors.amber,
 
               onTap:() {
                 Navigator.pushNamed(context, "/input");
@@ -96,8 +96,8 @@ class Inicio extends StatelessWidget {
             height: _rowHeight,
             child: InkWell(
               borderRadius: _borderRadius,
-              splashColor: Colors.redAccent,
-              highlightColor: Colors.red,
+              splashColor:Colors.amberAccent,
+              highlightColor: Colors.amber,
 
               onTap:() {
                 Navigator.pushNamed(context, "/dialog");
@@ -132,8 +132,8 @@ class Inicio extends StatelessWidget {
             height: _rowHeight,
             child: InkWell(
               borderRadius: _borderRadius,
-              splashColor: Colors.redAccent,
-              highlightColor: Colors.red,
+              splashColor:Colors.amberAccent,
+              highlightColor: Colors.amber,
 
               onTap:() {
                 Navigator.pushNamed(context, "/diaplay");

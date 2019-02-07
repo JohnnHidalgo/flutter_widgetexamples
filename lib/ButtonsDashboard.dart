@@ -202,7 +202,7 @@ class _ButtonsDashboardState extends State<ButtonsDashboard>{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Buttons Dashborad Flutter'),
+        title: Text('Buttons Dashboard Flutter'),
         backgroundColor: _backgroundColorTitleAppBar,
       ),
 
@@ -217,28 +217,28 @@ class _ButtonsDashboardState extends State<ButtonsDashboard>{
               child: RaisedButton (onPressed : _onPressed, child :  new  Text ( 'Click me' ),)
           ),'RaisedButton',
               'https://docs.flutter.io/flutter/material/RaisedButton-class.html',
-              'https://github.com/JohnnHidalgo/udacity_navigation_state/blob/master/lib/ButtonsDashboard.dart'
+              'https://github.com/JohnnHidalgo/flutter_widgetexamples/blob/master/lib/ButtonsDashboard.dart'
           ),
 
           MyItems(Container(
             child: IconButton (icon :  new  Icon (Icons.add), onPressed : _onPressed),
           ),'IconButton',
               'https://docs.flutter.io/flutter/material/IconButton-class.html',
-              'https://github.com/JohnnHidalgo/udacity_navigation_state/blob/master/lib/ButtonsDashboard.dart'
+              'https://github.com/JohnnHidalgo/flutter_widgetexamples/blob/master/lib/ButtonsDashboard.dart'
           ),
 
           MyItems(Container(
             child: FlatButton (onPressed : _onPressed, child :  new  Text ( 'Click me' ),),
           ),'FlatButton',
               'https://docs.flutter.io/flutter/material/FlatButton-class.html',
-              'https://github.com/JohnnHidalgo/udacity_navigation_state/blob/master/lib/ButtonsDashboard.dart'
+              'https://github.com/JohnnHidalgo/flutter_widgetexamples/blob/master/lib/ButtonsDashboard.dart'
           ),
 
           MyItems(Container(
             child: FloatingActionButton(onPressed: _onPressed, backgroundColor: Colors.redAccent, child: Icon(Icons.add),),
           ),'FloattingAction\n        Button',
               'https://docs.flutter.io/flutter/material/FloatingActionButton-class.html',
-              'https://github.com/JohnnHidalgo/udacity_navigation_state/blob/master/lib/ButtonsDashboard.dart'
+              'https://github.com/JohnnHidalgo/flutter_widgetexamples/blob/master/lib/ButtonsDashboard.dart'
           ),
 
           MyItems(Container(
@@ -252,7 +252,7 @@ class _ButtonsDashboardState extends State<ButtonsDashboard>{
             ),
           ),'PopMenuViews',
               'https://docs.flutter.io/flutter/material/PopupMenuButton-class.html',
-              'https://github.com/JohnnHidalgo/udacity_navigation_state/blob/master/lib/ButtonsDashboard.dart'
+              'https://github.com/JohnnHidalgo/flutter_widgetexamples/blob/master/lib/ButtonsDashboard.dart'
           ),
         ],
 
