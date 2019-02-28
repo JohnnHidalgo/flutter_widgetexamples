@@ -19,4 +19,4 @@ samples, guidance on mobile development, and a full API reference.
 
 
 
-  ![Alt text](https://github.com/JohnnHidalgo/flutter_widgetexamples/blob/master/RecorderOne.mp4)
+  ![Alt text](https://github.com/JohnnHidalgo/flutter_widgetexamples/blob/master/RecordOne.mp4)
