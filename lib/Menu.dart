@@ -166,6 +166,41 @@ class Inicio extends StatelessWidget {
 
 
 
+            Container(
+              height: _rowHeight,
+              child: InkWell(
+                borderRadius: _borderRadius,
+                splashColor:Colors.amberAccent,
+                highlightColor: Colors.amber,
+
+                onTap:() {
+                  Navigator.pushNamed(context, "/chart");
+                },
+
+                child: Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: <Widget>[
+                      Padding(
+                        padding: EdgeInsets.all(16.0),
+                        child: Icon(
+                          Icons.library_books,
+                          size: 60.0,
+                        ),
+                      ),
+                      Center(
+                        child: Text('Displays',
+                          textAlign: TextAlign.center,
+                          style: Theme.of(context).textTheme.headline,),
+                      ),
+
+                    ],
+                  ),
+
+                ),
+              ),
+            ),
 
           ],
         )

@@ -4,8 +4,7 @@ import 'package:flutter_widgetexamples/ButtonsDashboard.dart';
 import 'package:flutter_widgetexamples/InputDashboard.dart';
 import 'package:flutter_widgetexamples/DialogDashboard.dart';
 import 'package:flutter_widgetexamples/DisplayDashboard.dart';
-
-
+import 'package:flutter_widgetexamples/ChartsDashboard.dart';
 
 void main() => runApp(MyApp());
 
@@ -27,6 +26,7 @@ class MyApp extends StatelessWidget {
           "/input" : (BuildContext context) => InputDashboard(),
           "/dialog" : (BuildContext context) => DialogDashboard(),
           "/diaplay" : (BuildContext context) => DisplayDashboard(),
+          "/chart" : (BuildContext context) => ChartsDashboard(),
         } ,
 
         home: Inicio()
