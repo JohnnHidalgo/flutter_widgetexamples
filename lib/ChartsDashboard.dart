@@ -248,7 +248,7 @@ class _ChartsDashboardState extends State<ChartsDashboard>{
             ),
 
           ),'BarChart',
-              'https://docs.flutter.io/flutter/material/RaisedButton-class.html',
+              'https://google.github.io/charts/flutter/example/bar_charts/simple',
               'https://github.com/JohnnHidalgo/udacity_navigation_state/blob/master/lib/ButtonsDashboard.dart'
           ),
 
@@ -264,7 +264,7 @@ class _ChartsDashboardState extends State<ChartsDashboard>{
             ),
 
           ),'BarChart ',
-              'https://docs.flutter.io/flutter/material/IconButton-class.html',
+              'https://google.github.io/charts/flutter/example/bar_charts/simple',
               'https://github.com/JohnnHidalgo/udacity_navigation_state/blob/master/lib/ButtonsDashboard.dart'
           ),
 
@@ -280,7 +280,7 @@ class _ChartsDashboardState extends State<ChartsDashboard>{
               ),
             ),
           ),'Piechart',
-              'https://docs.flutter.io/flutter/material/FlatButton-class.html',
+              'https://google.github.io/charts/flutter/example/pie_charts/simple',
               'https://github.com/JohnnHidalgo/udacity_navigation_state/blob/master/lib/ButtonsDashboard.dart'
           ),
 

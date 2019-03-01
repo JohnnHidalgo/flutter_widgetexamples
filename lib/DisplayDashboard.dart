@@ -479,7 +479,6 @@ class _DiplayDashboardState extends State<DisplayDashboard>{
               )
 
           ),
-
               'GridView',
               'https://docs.flutter.io/flutter/widgets/GridView-class.html',
               'https://github.com/JohnnHidalgo/flutter_widgetexamples/blob/master/lib/DisplayDashboard.dart'
