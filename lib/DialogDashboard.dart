@@ -202,7 +202,7 @@ class _DialogDashboardState extends State<DialogDashboard>{
                           highlightColor: Colors.amber,
 
                           onTap: (){
-                            _launchURL(url2);
+                            _launchURL(url1);
                           },
 
                           child: Padding(
@@ -379,9 +379,6 @@ class _DialogDashboardState extends State<DialogDashboard>{
           StaggeredTile.extent(2,240.0),
           StaggeredTile.extent(2,240.0),
           StaggeredTile.extent(2,500.0),
-//          StaggeredTile.extent(2,240.0),
-
-
         ],
       ),
     );

@@ -24,7 +24,6 @@ class Inicio extends StatelessWidget {
               borderRadius: _borderRadius,
               splashColor:Colors.amberAccent,
               highlightColor: Colors.amber,
-
               onTap:() {
                 Navigator.pushNamed(context, "/buttons");
               },
@@ -152,7 +151,7 @@ class Inicio extends StatelessWidget {
                       ),
                     ),
                     Center(
-                      child: Text('Displays',
+                      child: Text('Charts',
                         textAlign: TextAlign.center,
                         style: Theme.of(context).textTheme.headline,),
                     ),
