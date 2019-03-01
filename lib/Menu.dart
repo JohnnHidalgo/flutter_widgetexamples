@@ -151,7 +151,7 @@ class Inicio extends StatelessWidget {
                       ),
                     ),
                     Center(
-                      child: Text('Charts',
+                      child: Text('Display',
                         textAlign: TextAlign.center,
                         style: Theme.of(context).textTheme.headline,),
                     ),
@@ -184,12 +184,12 @@ class Inicio extends StatelessWidget {
                       Padding(
                         padding: EdgeInsets.all(16.0),
                         child: Icon(
-                          Icons.library_books,
+                          Icons.pie_chart,
                           size: 60.0,
                         ),
                       ),
                       Center(
-                        child: Text('Displays',
+                        child: Text('Charts',
                           textAlign: TextAlign.center,
                           style: Theme.of(context).textTheme.headline,),
                       ),
