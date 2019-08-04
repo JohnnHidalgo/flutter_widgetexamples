@@ -1,22 +1,19 @@
 # flutter_widgetexamples
 
-A new Flutter application.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.io/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.io/docs/cookbook)
-
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.io/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+Proyecto de ejemplos de Widgets en Flutter
 
 
+# flutter Buttons
+![Alt text](https://github.com/JohnnHidalgo/flutter_widgetexamples/blob/master/assets/gifts/20190228_101408.gif)
 
+# flutter Input and Selection
+![Alt text](https://github.com/JohnnHidalgo/flutter_widgetexamples/blob/master/assets/gifts/20190804_192714.gif)
 
+# flutter Dialogs 
+![Alt text](https://github.com/JohnnHidalgo/flutter_widgetexamples/blob/master/assets/gifts/20190804_192836.gif)
 
-  ![Alt text](https://github.com/JohnnHidalgo/flutter_widgetexamples/blob/master/RecordOne.mp4)
+# flutter Displays
+![Alt text](https://github.com/JohnnHidalgo/flutter_widgetexamples/blob/master/assets/gifts/20190804_193021.gif)
+
+# flutter Charts
+![Alt text](https://github.com/JohnnHidalgo/flutter_widgetexamples/blob/master/assets/gifts/20190804_193209.gif)
