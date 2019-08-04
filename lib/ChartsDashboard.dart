@@ -26,158 +26,145 @@ class _ChartsDashboardState extends State<ChartsDashboard>{
     }
   }
 
-  Material MyItems(Widget wid, String heading, String url1, String url2){
+  Widget MyItems(Widget wid, String heading, String url1, String url2){
 
-    return Material(
-      color: Colors.white,
-      elevation: 14.0,
-      shadowColor: _backgroundColorTitleAppBar,
-      borderRadius: _borderRadius,
+    return Container(
+      margin: EdgeInsets.all(16.0),
+      child: Material(
 
-      child: Center(
+        color: Colors.white,
+        elevation: 14.0,
+        shadowColor: _backgroundColorTitleAppBar,
+        borderRadius: _borderRadius,
 
-        child: Padding(
+        child: Container(
+          child: Padding(
 
-          padding: const EdgeInsets.all(8.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
 
-
-            children: <Widget>[
-
-              Column(
-
-                children: <Widget>[
-
-                  Column(
-
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      ///Text
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(heading,
-                          style: TextStyle(
-                            color: _backgroundColorTitle,
-                            fontSize: 40.0,
-                          ),
-                        ),
-                      ),
-                      ///Windget
-                      Material(
-                        borderRadius:  _borderRadius,
-                        child: Padding(
-                          padding: const EdgeInsets.all(16.0),
-                          child: wid,
-                        ),
-                      ),
-
-
-                    ],
-
-                  ),
-
-
-                  Container(
-                    margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
-
-                    //color: Color.fromARGB(255, 19, 185, 253),
-                    height: 45.0,//alto del Widget
-                    child: Row(
-
+              children: <Widget>[
+                Column(
+                  children: <Widget>[
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-
-                        ///Documentation
-                        InkWell(
-
-                          borderRadius: _borderRadius,//curva
-                          splashColor:Colors.amberAccent,//color al presionar tiempo corto
-                          highlightColor: Colors.amber,//color al presionar tiempo largo, puede cabiar por Colors.blue para notar la diferencia
-
-                          onTap: (){
-                            _launchURL(url1);
-                          },
-
-                          child: Padding(
-                            padding: EdgeInsets.all(0.0),
-                            child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Padding(
-                                  padding: EdgeInsets.zero,
-                                  child: Icon(
-                                    Icons.library_books,
-                                    size: 25.0,
-                                  ),
-                                ),
-
-                                Center(
-                                  child: Text(
-                                    'Documentation',
-                                    style: Theme.of(context).textTheme.headline,
-                                  ),
-
-                                ),
-
-                              ],
-
+                        ///Text
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(heading,
+                            style: TextStyle(
+                              color: _backgroundColorTitle,
+                              fontSize: 40.0,
                             ),
                           ),
-
                         ),
-
-
-                        ///Github
-                        InkWell(
-                          borderRadius: _borderRadius,//curva
-                          splashColor:Colors.amberAccent,//color al presionar tiempo corto
-                          highlightColor: Colors.amber,//color al presionar tiempo largo, puede cabiar por Colors.blue para notar la diferencia
-
-                          onTap: (){
-                            _launchURL(url2);
-                          },
-
+                        ///Windget
+                        Material(
+                          borderRadius:  _borderRadius,
                           child: Padding(
-                            padding: EdgeInsets.all(8.0),
-                            child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Padding(
-                                  padding: EdgeInsets.zero,
-
-                                  child : Image.asset('assets/GitHub0.png'),
-                                ),
-
-                                Center(
-                                  child: Text(
-                                    'Github',
-                                    style: Theme.of(context).textTheme.headline,
-                                  ),
-
-                                ),
-
-                              ],
-
-                            ),
+                            padding: const EdgeInsets.all(16.0),
+                            child: wid,
                           ),
-
                         ),
                       ],
                     ),
 
-                  )
 
-                ],
+                    Container(
+                      margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                      height: 45.0,//alto del Widget
+                      child: Row(
 
-              )
-            ],
+                        children: <Widget>[
+
+                          ///Documentation
+                          InkWell(
+                            borderRadius: _borderRadius,
+                            splashColor:Colors.amberAccent,
+                            highlightColor: Colors.amber,
+
+                            onTap: (){
+                              _launchURL(url1);
+                            },
+
+                            child: Padding(
+                              padding: EdgeInsets.all(0.0),
+                              child: Row(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Padding(
+                                    padding: EdgeInsets.zero,
+                                    child: Icon(
+                                      Icons.library_books,
+                                      size: 25.0,
+                                    ),
+                                  ),
+
+                                  Center(
+                                    child: Text(
+                                      'Documentation',
+                                      style: Theme.of(context).textTheme.headline,
+                                    ),
+                                  ),
+                                ],
+
+                              ),
+                            ),
+
+                          ),
+
+                          ///Github
+                          InkWell(
+                            borderRadius: _borderRadius,
+                            splashColor:Colors.amberAccent,
+                            highlightColor: Colors.amber,
+
+                            onTap: (){
+                              _launchURL(url2);
+                            },
+
+                            child: Padding(
+                              padding: EdgeInsets.all(8.0),
+                              child: Row(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Padding(
+                                    padding: EdgeInsets.zero,
+
+                                    child : Image.asset('assets/GitHub0.png'),
+                                  ),
+
+                                  Center(
+                                    child: Text(
+                                      'Github',
+                                      style: Theme.of(context).textTheme.headline,
+                                    ),
+
+                                  ),
+
+                                ],
+
+                              ),
+                            ),
+
+                          ),
+                        ],
+                      ),
+
+                    )
+
+                  ],
+
+                )
+              ],
+            ),
           ),
         ),
       ),
     );
   }
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -228,12 +215,7 @@ class _ChartsDashboardState extends State<ChartsDashboard>{
         backgroundColor: _backgroundColorTitleAppBar,
       ),
 
-      body:StaggeredGridView.count(
-        crossAxisCount: 2,
-        crossAxisSpacing: 12.0,
-        mainAxisSpacing: 12.0,
-        padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-
+      body:ListView(
         children: <Widget>[
 
           MyItems(Container(
@@ -287,12 +269,6 @@ class _ChartsDashboardState extends State<ChartsDashboard>{
 
         ],
 
-
-        staggeredTiles: [
-          StaggeredTile.extent(2,500.0),
-          StaggeredTile.extent(2,500.0),
-          StaggeredTile.extent(2,500.0),
-        ],
       ),
     );
   }

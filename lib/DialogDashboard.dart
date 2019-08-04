@@ -41,6 +41,14 @@ class _DialogDashboardState extends State<DialogDashboard>{
     }
   }
 
+  _launchURL(String url) async {
+
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
 
   ///AlertDialog
   String _value1='.......';
@@ -126,159 +134,141 @@ class _DialogDashboardState extends State<DialogDashboard>{
   }
 
 
-  _launchURL(String url) async {
 
-    if (await canLaunch(url)) {
-      await launch(url);
-    } else {
-      throw 'Could not launch $url';
-    }
-  }
+  Widget MyItems(Widget wid, String heading, String url1, String url2){
 
+    return Container(
+      margin: EdgeInsets.all(16.0),
+      child: Material(
 
-  Material MyItems(Widget wid, String heading, String url1, String url2){
+        color: Colors.white,
+        elevation: 14.0,
+        shadowColor: _backgroundColorTitleAppBar,
+        borderRadius: _borderRadius,
 
-    return Material(
-      color: Colors.white,
-      elevation: 14.0,
-      shadowColor: _backgroundColorTitleAppBar,
-      borderRadius: _borderRadius,
+        child: Container(
+          child: Padding(
 
-      child: Center(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
 
-        child: Padding(
-
-          padding: const EdgeInsets.all(8.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-
-
-            children: <Widget>[
-
-              Column(
-
-                children: <Widget>[
-
-                  Column(
-
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      ///Text
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(heading,
-                          style: TextStyle(
-                            color: _backgroundColorTitle,
-                            fontSize: 40.0,
-                          ),
-                        ),
-                      ),
-                      ///Windget
-                      Material(
-                        borderRadius:  _borderRadius,
-                        child: Padding(
-                          padding: const EdgeInsets.all(16.0),
-                          child: wid,
-                        ),
-                      ),
-
-
-                    ],
-
-                  ),
-
-
-                  Container(
-                    margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                    height: 45.0,
-                    child: Row(
-
+              children: <Widget>[
+                Column(
+                  children: <Widget>[
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-
-
-                        InkWell(
-                          borderRadius: _borderRadius,
-                          splashColor:Colors.amberAccent,
-                          highlightColor: Colors.amber,
-
-                          onTap: (){
-                            _launchURL(url1);
-                          },
-
-                          child: Padding(
-                            padding: EdgeInsets.all(0.0),
-                            child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Padding(
-                                  padding: EdgeInsets.zero,
-                                  child: Icon(
-                                    Icons.library_books,
-                                    size: 25.0,
-                                  ),
-                                ),
-
-                                Center(
-                                  child: Text(
-                                    'Documentation',
-                                    style: Theme.of(context).textTheme.headline,
-                                  ),
-
-                                ),
-
-                              ],
-
+                        ///Text
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(heading,
+                            style: TextStyle(
+                              color: _backgroundColorTitle,
+                              fontSize: 40.0,
                             ),
                           ),
-
                         ),
-
-                        InkWell(
-                          borderRadius: _borderRadius,
-                          splashColor:Colors.amberAccent,
-                          highlightColor: Colors.amber,
-
-                          onTap: (){
-                            _launchURL(url2);
-                          },
-
+                        ///Windget
+                        Material(
+                          borderRadius:  _borderRadius,
                           child: Padding(
-                            padding: EdgeInsets.all(8.0),
-                            child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Padding(
-                                  padding: EdgeInsets.zero,
-
-                                  child : Image.asset('assets/GitHub0.png'),
-                                ),
-
-                                Center(
-                                  child: Text(
-                                    'Github',
-                                    style: Theme.of(context).textTheme.headline,
-                                  ),
-
-                                ),
-
-                              ],
-
-                            ),
+                            padding: const EdgeInsets.all(16.0),
+                            child: wid,
                           ),
-
                         ),
                       ],
                     ),
 
-                  )
 
+                    Container(
+                      margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                      height: 45.0,//alto del Widget
+                      child: Row(
 
+                        children: <Widget>[
 
+                          ///Documentation
+                          InkWell(
+                            borderRadius: _borderRadius,
+                            splashColor:Colors.amberAccent,
+                            highlightColor: Colors.amber,
 
-                ],
+                            onTap: (){
+                              _launchURL(url1);
+                            },
 
-              )
-            ],
+                            child: Padding(
+                              padding: EdgeInsets.all(0.0),
+                              child: Row(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Padding(
+                                    padding: EdgeInsets.zero,
+                                    child: Icon(
+                                      Icons.library_books,
+                                      size: 25.0,
+                                    ),
+                                  ),
+
+                                  Center(
+                                    child: Text(
+                                      'Documentation',
+                                      style: Theme.of(context).textTheme.headline,
+                                    ),
+                                  ),
+                                ],
+
+                              ),
+                            ),
+
+                          ),
+
+                          ///Github
+                          InkWell(
+                            borderRadius: _borderRadius,
+                            splashColor:Colors.amberAccent,
+                            highlightColor: Colors.amber,
+
+                            onTap: (){
+                              _launchURL(url2);
+                            },
+
+                            child: Padding(
+                              padding: EdgeInsets.all(8.0),
+                              child: Row(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Padding(
+                                    padding: EdgeInsets.zero,
+
+                                    child : Image.asset('assets/GitHub0.png'),
+                                  ),
+
+                                  Center(
+                                    child: Text(
+                                      'Github',
+                                      style: Theme.of(context).textTheme.headline,
+                                    ),
+
+                                  ),
+
+                                ],
+
+                              ),
+                            ),
+
+                          ),
+                        ],
+                      ),
+
+                    )
+
+                  ],
+
+                )
+              ],
+            ),
           ),
         ),
       ),
@@ -296,11 +286,7 @@ class _DialogDashboardState extends State<DialogDashboard>{
         backgroundColor: _backgroundColorTitleAppBar,
       ),
 
-      body:StaggeredGridView.count(
-        crossAxisCount: 2,
-        crossAxisSpacing: 12.0,
-        mainAxisSpacing: 12.0,
-        padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+      body:ListView(
 
         children: <Widget>[
 
@@ -373,13 +359,6 @@ class _DialogDashboardState extends State<DialogDashboard>{
 
         ],
 
-
-        staggeredTiles: [
-          StaggeredTile.extent(2,240.0),
-          StaggeredTile.extent(2,240.0),
-          StaggeredTile.extent(2,240.0),
-          StaggeredTile.extent(2,500.0),
-        ],
       ),
     );
   }
